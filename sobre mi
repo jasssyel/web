@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <title>sobre-mi</title>
+    <!-- SECCIÓN SOBRE MI -->
+        <section id="sobre-mi">
+            <article>
+                <h2>Sobre mí</h2>
+                <p>
+                    Soy estudiante de ingeniería con interés en programación,
+                    electrónica digital y desarrollo web.
+                </p>
