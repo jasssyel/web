@@ -363,7 +363,7 @@ label {
 
 input, textarea {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     padding: 1rem;
     margin-bottom: 1.5rem;
     border: 1px solid rgba(0, 102, 255, 0.3);
@@ -383,6 +383,20 @@ textarea:focus {
     transform: translateY(-2px);
 }
 
+#contact-form {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    align-items: start;
+}
+
 button[type="submit"], input[type="submit"] {
     background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
     color: #ffffff;
@@ -393,6 +407,7 @@ button[type="submit"], input[type="submit"] {
     font-weight: 600;
     transition: 0.3s ease;
     font-size: 1rem;
+    width: fit-content;
 }
 
 button[type="submit"]:hover, input[type="submit"]:hover {
@@ -402,12 +417,6 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 button[type="submit"]:active, input[type="submit"]:active {
     transform: translateY(0);
-}
-
-.contact-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
 }
 
 .contact-info {
@@ -420,11 +429,6 @@ button[type="submit"]:active, input[type="submit"]:active {
 
 .contact-info a {
     color: var(--color-primario);
-}
-
-#contact-form {
-    display: grid;
-    gap: 1rem;
 }
 
 .form-message {
