@@ -25,4 +25,34 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('theme', 'light');
         }
     });
+
+    const contactForm = document.getElementById('contact-form');
+    const contactMessage = document.querySelector('.form-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const asunto = document.getElementById('asunto').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (!nombre || !email || !asunto || !mensaje) {
+                contactMessage.textContent = 'Por favor completa todos los campos antes de enviar.';
+                return;
+            }
+
+            const destino = 'kevinjasiel1@hotmail.com';
+            const mailto = `mailto:${destino}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${email}\n\n${mensaje}`)}`;
+            contactMessage.textContent = 'Abriendo tu cliente de correo...';
+
+            const mailLink = document.createElement('a');
+            mailLink.href = mailto;
+            mailLink.style.display = 'none';
+            document.body.appendChild(mailLink);
+            mailLink.click();
+            document.body.removeChild(mailLink);
+        });
+    }
 });
