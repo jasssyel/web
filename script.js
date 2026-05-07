@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            // No prevent default, let the form submit to Formspree
             contactMessage.textContent = 'Enviando mensaje...';
+            // Let the form submit normally
         });
     }
 });
