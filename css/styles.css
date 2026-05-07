@@ -1,20 +1,23 @@
 
 /* VARIABLES GLOBALES - MODO DÍA (CLARO) */
 :root {
-    --color-primario: #7014da;
-    --color-secundario: #863333;
-    --color-fondo: #a6b4c8;
-    --letras-titulo: #fafafa;
-    --color-hover: #040505;
-    --color-accent: #e5127b;
+    --color-primario: #7d8a99; /* gris azulado suave */
+    --color-secundario: #62717d; /* gris medio para contraste */
+    --color-fondo: #eceff4; /* fondo gris claro */
+    --letras-titulo: #2c3e50; /* texto oscuro suave */
+    --color-hover: #9aa5b3; /* hover suave */
+    --color-accent: #aab7c4; /* acento tenue */
+    --color-nav: rgba(255, 255, 255, 0.92); /* navegación clara */
+    --color-toggle-bg: rgba(255, 255, 255, 0.85);
+    --color-toggle-border: rgba(44, 62, 80, 0.16);
 
     --fuente-principal: 'Poppins', sans-serif;
-    --color-tarjeta: #88acaa;       
-    --shadow-lg: 0 20px 40px rgba(0, 102, 255, 0.15);
-    --shadow-md: 0 10px 20px rgba(0, 100, 255, 0.1);
-    --color-border: rgba(44, 97, 177, 0.2);
-    --color-border-light: rgba(0, 102, 255, 0.1);
-    --color-shadow-glow: rgba(0, 102, 255, 0.4);
+    --color-tarjeta: #ffffff;       
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.06);
+    --color-border: rgba(44, 62, 80, 0.12);
+    --color-border-light: rgba(44, 62, 80, 0.08);
+    --color-shadow-glow: rgba(125, 140, 153, 0.16);
 }
 
 /* MODO OSCURO - MODO NOCHE */
@@ -24,14 +27,21 @@ body.dark-mode {
     --color-secundario: #0096d6;
     --letras-titulo: #f1f1f1;
     --color-hover: #00b8d4;
-    --color-tarjeta: #1a2847;
-    --color-border: rgba(0, 217, 255, 0.2);
+    --color-tarjeta: #596f9e;
+    --color-border: rgba(72, 106, 112, 0.2);
     --color-border-light: rgba(47, 151, 169, 0.1);
-    --color-shadow-glow: rgba(0, 217, 255, 0.4);
+    --color-shadow-glow: rgba(96, 205, 219, 0.4);
+    --color-nav: rgba(15, 23, 42, 0.95);
+    --color-toggle-bg: rgba(50, 50, 100, 0.4);
+    --color-toggle-border: rgba(240, 247, 255, 0.4);
 }
 
 body.dark-mode section {
     background-color: var(--color-fondo);
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #081427 0%, #102241 55%, #142d4f 100%);
 }
 
 .tarjeta {
@@ -46,7 +56,7 @@ body.dark-mode .tarjeta {
 
 body.dark-mode input,
 body.dark-mode textarea {
-    background: rgba(26, 40, 71, 0.8);
+    background: rgba(64, 82, 120, 0.8);
     color: var(--letras-titulo);
     border-color: var(--color-border);
 }
@@ -125,7 +135,7 @@ article h2 {
 
 /* HEADER (Encabezado) */
 header {
-    background: linear-gradient(135deg, #00d9ff 0%, #0066ff 50%, #ff0080 100%);
+    background: linear-gradient(135deg, #eef2f7 0%, #d8dee6 55%, #8d99a6 100%);
     color: var(--letras-titulo);
     padding: 3rem 2rem;
     text-align: center;
@@ -228,7 +238,7 @@ body.dark-mode .theme-toggle .toggle-icon.day {
 
 /* NAV - FLEXBOX (Estilo y acomodo) */
 nav {
-    background: rgba(15, 23, 42, 0.95);
+    background: var(--color-nav);
     backdrop-filter: blur(10px);
     width: 100%;
     margin: 0;
@@ -282,7 +292,9 @@ nav a:hover::after {
 nav .theme-toggle {
     width: 70px;
     height: 35px;
-    border: 1px solid rgba(240, 247, 255, 0.6);
+    border: 1px solid var(--color-toggle-border);
+    background: var(--color-toggle-bg);
+    color: var(--letras-titulo);
     padding: 0 6px;
     margin: 0;
     font-size: 1rem;
@@ -303,6 +315,10 @@ section .tarjeta {
     max-width: var(--seccion-ancho, none); /* si se define, restringe el ancho */
     min-height: var(--seccion-alto, auto);
     margin: 1rem 0;                      /* espacio vertical entre cajas */
+}
+
+section:last-of-type .tarjeta {
+    margin-bottom: 0;                    /*extiende el margen*/
 }
 
 article {
@@ -453,7 +469,7 @@ footer {
     color: #f8f8ff;
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 0;
     width: 100%;
     box-sizing: border-box;
 }
