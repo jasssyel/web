@@ -1,101 +1,102 @@
-Portfolio Personal para Kevin Martinez Proyecto Programacion Web Full-Stack
-Un sitio web personal responsivo y moderno que actúa como portafolio profesional, showcaseando proyectos, habilidades y experiencia educativa.
+# Portfolio Personal Kevin Martinez Proyecto Programacion Web Full-Stack
+## Un sitio web personal responsivo y moderno que actúa como portafolio profesional, showcaseando proyectos, habilidades y experiencia educativa.
 
-Características
+### Características
 
-Estructura Semántica
+#### Estructura Semántica
 Implementación completa de HTML5 semántico con<img width="535" height="25" alt="image" src="https://github.com/user-attachments/assets/7940ea02-b9a5-4f17-a3f9-8a8a03fdffeb" />
 
 Múltiples tipos de listas (desordenada, ordenada y de definición)
 Formulario de contacto funcional con validación
 
-Diseño Responsivo
+#### Diseño Responsivo
 Flexbox: Menú de navegación adaptable con hamburguesa en móvil
 CSS Grid: Galería de proyectos, tecnologías e información personal distribuidas dinámicamente
 Media Queries: Cambio fluido de diseño de una columna (móvil) a múltiples columnas (escritorio)
 
-Tema Oscuro/Claro
+#### Tema Oscuro/Claro
 Alternador de tema que cambia dinámicamente todas las variables CSS
 Persistencia de preferencia usando localStorage
 Transiciones suaves entre temas
 
-Validación de Formulario
+#### Validación de Formulario
 Validación de campos vacíos en tiempo real
 Verificación de formato de email con expresiones regulares
 Mensajes de error/éxito animados en el DOM
 Integración con cliente de correo (mailto:)
 
-  Tecnología y Estilo
+  #### Tecnología y Estilo
 Variables CSS: Paleta de colores centralizada (:root)
 Google Fonts: Tipografía Poppins importada
 Animaciones: Efectos de hover, fade-in, floating backgrounds
 Sombras y Bordes: Profundidad visual con box-shadow y gradientes
 
-Estructura del Proyecto
-Pagina
+## Estructura del Proyecto
 <img width="600" height="202" alt="image" src="https://github.com/user-attachments/assets/e467adad-3180-41d9-a76b-9fa3070dc97f" />
 
     
-   Tecnologías Utilizadas
+  ## Tecnologías Utilizadas
    
-*HTML5: Elementos semánticos
-*CSS3: Grid, Flexbox, Variables, Media Queries, Animaciones
-*JavaScript: Manipulación del DOM, localStorage, validación
+HTML5: Elementos semánticos
+CSS3: Grid, Flexbox, Variables, Media Queries, Animaciones
+JavaScript: Manipulación del DOM, localStorage, validación
     Secciones Principales
     
-1. Header
+### 1. Header
 Título con nombre y especialidad
 Degradado de fondo con efecto flotante
 
-2. Navegación
+### 2. Navegación
 Lista desordenada ("<ul>")
 Enlaces a secciones (smooth scroll)
 Botón alternador de tema (☀️/🌙)
 Menú hamburguesa responsivo
 
-3. Sobre Mí
+### 3. Sobre Mí
 Foto de perfil
 Descripción personal
 Mini recuadros con edad y ciudad
 Enlace a GitHub
 
-4. Tecnologías
-Lista de definición (<dl>) con <dt> y <dd>
+### 4. Tecnologías
+Lista de definición <img width="187" height="18" alt="image" src="https://github.com/user-attachments/assets/8f04a3aa-91ea-4742-930e-8c68197ad5e9" />
+
 Grid responsivo: Frontend, Backend, Electrónica Digital
 Efectos hover interactivos
 
-5. Proyectos
+### 5. Proyectos
 Grid de tarjetas con CSS Grid
 Descripción de proyectos
 Enlaces a repositorios GitHub
 Imágenes de referencia
 
-6. Historial Educativo
-Lista ordenada (<ol>) cronológica
+### 6. Historial Educativo
+Lista ordenada <img width="69" height="26" alt="image" src="https://github.com/user-attachments/assets/1d900410-ceaa-4bd6-afdc-3b1e9592ead6" />
+  cronológica
 Secundaria, Preparatoria, Universidad
 
-7. Contacto
+### 7. Contacto
 Formulario con validación
 Campos: nombre, email, asunto, mensaje
 Integración mailto: para abrir cliente de correo
 Mensajes de feedback animados
 
-8. Footer
+### 8. Footer
 Información de derechos de autor
 
-Responsividad
+## Responsividad
 Móvil (<768px): Menú hamburguesa, una columna
 
 Tablet (768px-1024px): Dos columnas, menú expandido
 
 Escritorio (>1024px): Tres+ columnas, layout completo
 
-Tema Oscuro/Claro
+## Tema Oscuro/Claro
 Haz clic en el botón de tema (☀️/🌙) en la navegación
 Tu preferencia se guarda automáticamente
 Todas las variables CSS se actualizan al instante
 
-Validación del Formulario
+## Validación del Formulario
 El formulario valida:
  Campos no vacíos
  Formato válido de email (usuario@dominio.com)
