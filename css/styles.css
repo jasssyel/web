@@ -12,7 +12,7 @@
     --color-toggle-border: rgba(44, 62, 80, 0.16);
 
     --fuente-principal: 'Poppins', sans-serif;
-    --color-tarjeta: #3a4b6a;       
+    --color-tarjeta: #ffffff;       
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.06);
     --color-border: rgba(44, 62, 80, 0.12);
@@ -46,7 +46,6 @@ body.dark-mode header {
 
 .tarjeta {
     border: 1px solid var(--color-border);
-    background: var(--color-tarjeta);
 }
 
 body.dark-mode .tarjeta {
@@ -716,7 +715,7 @@ dd {
 }
 
 .project-item {
-    background: var(--color-tarjeta);
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
     padding: 2rem;
     border-radius: 12px;
     border: 2px solid var(--color-primario);
@@ -743,6 +742,10 @@ dd {
 
 .project-item:hover::before {
     left: 100%;
+}
+
+body.dark-mode .project-item {
+    background: var(--color-tarjeta);
 }
 
 .project-item h3 {
