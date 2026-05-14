@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.documentElement.classList.add('js');
-    const revealElements = document.querySelectorAll('.tarjeta');
+    const revealElements = document.querySelectorAll('.tarjeta, .project-item');
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        threshold: 0.15,
+        threshold: 0.2,
         rootMargin: '0px 0px -100px 0px'
     });
 
