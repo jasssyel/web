@@ -12,7 +12,7 @@
     --color-toggle-border: rgba(44, 62, 80, 0.16);
 
     --fuente-principal: 'Poppins', sans-serif;
-    --color-tarjeta: #ffffff;       
+    --color-tarjeta: #3a4b6a;       
     --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.06);
     --color-border: rgba(44, 62, 80, 0.12);
@@ -27,7 +27,7 @@ body.dark-mode {
     --color-secundario: #0096d6;
     --letras-titulo: #f1f1f1;
     --color-hover: #00b8d4;
-    --color-tarjeta: #596f9e;
+    --color-tarjeta: #2a3b5a;
     --color-border: rgba(72, 106, 112, 0.2);
     --color-border-light: rgba(47, 151, 169, 0.1);
     --color-shadow-glow: rgba(96, 205, 219, 0.4);
@@ -46,12 +46,13 @@ body.dark-mode header {
 
 .tarjeta {
     border: 1px solid var(--color-border);
+    background: var(--color-tarjeta);
 }
 
 body.dark-mode .tarjeta {
-    background: var(--color-tarjeta);
+    background: var(--color-tarjeta #08090a);
     color: #c0d9ea;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border #08090a);
 } 
 
 body.dark-mode input,
@@ -715,7 +716,7 @@ dd {
 }
 
 .project-item {
-    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    background: var(--color-tarjeta);
     padding: 2rem;
     border-radius: 12px;
     border: 2px solid var(--color-primario);
