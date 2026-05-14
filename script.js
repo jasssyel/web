@@ -26,13 +26,55 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Hamburger Menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.querySelector('nav .nav-menu');
+    const navLinks = document.querySelectorAll('nav .nav-menu a');
+
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú cuando se hace click en un enlace
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     const contactForm = document.getElementById('contact-form');
     const contactMessage = document.querySelector('.form-message');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             contactMessage.textContent = 'Enviando mensaje...';
-            // Let the form submit normally
+            
         });
     }
+    // ANIMACIONES AL HACER SCROLL
+
+const observer = new IntersectionObserver((entries)=>{
+    
+    entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+            entry.target.classList.add("show-section");
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+const hiddenElements = document.querySelectorAll("section");
+
+hiddenElements.forEach((el)=>{
+    el.classList.add("hidden-section");
+    observer.observe(el);
+});
 });

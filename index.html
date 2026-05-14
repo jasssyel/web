@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -28,7 +30,12 @@
 
     <!-- NAV (LISTA DESORDENADA)-->
     <nav>
-        <ul>
+        <button id="hamburger-menu" class="hamburger-menu" title="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="#sobre-mi">Sobre mí</a></li>
             <li><a href="#tecnologias">Tecnologías</a></li>
             <li><a href="#Proyectos">Proyectos</a></li>
@@ -56,16 +63,18 @@
 
                 <p>
                     Soy Kevin Martinez, un estudiante de ingeniería con interés en 
-                    programación, electrónica digital y desarrollo web.
-                </p>
-
-                <!-- Enlace externo: abrir en nueva pestaña con target="_blank" -->
-                <p>
-                    Visita mi GitHub:
+                    programación, electrónica digital y desarrollo web. Actualmente curso el 3.° año
+                    de la carrera de Ingeniería en Sistemas Electrónicos Inteligentes. 
+                 Me apasiona aprender nuevas tecnologías y aplicar mis conocimientos en proyectos 
+                 prácticos. En mi tiempo libre, disfruto explorando el mundo del desarrollo web y
+                 practicando en pequerños proyectos personales para mejorar mis habilidades.
+                 Puedes ver algunos de mis proyectos <!-- Enlace externo: abrir en nueva pestaña -->
+                 visitando mi GitHub:
                     <a href="https://github.com/jasssyel" target="_blank" rel="noopener noreferrer">
                         Mi Perfil
                     </a>
                 </p>
+               
             </article>
         </section>
 
@@ -95,20 +104,17 @@
                 <h2>Proyectos</h2>
                 <div class="projects-grid">
                     <div class="project-item">
-                        <h3>Proyecto 1</h3>
-                        <p>Gestor de contraseñas C++</p>
-                        <img src="./img/proyecto1.jpg" alt="Foto de referencia gestor" class="project-img">
-                        <p><a href="https://github.com/jasssyel/Gestor-de-contrase-as-en-C-" target="_blank" rel="noopener noreferrer">Ver en GitHub</a></p>
+                        <h3>Gestor de contraseñas C++</h3>
+                        <p>Desarrollé un gestor de contraseñas en C++ que permite a los usuarios almacenar y organizar sus contraseñas de manera segura. El programa utiliza cifrado para proteger la información y ofrece una interfaz sencilla para agregar, eliminar y buscar contraseñas.</p>
                     </div>
 
                     <div class="project-item">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción </p>
+                        <h3>Página web / portafolio web</h3>
+                        <p>Creación de esta página web personal utilizando HTML, CSS y JavaScript para mostrar mi portafolio de proyectos y habilidades. La página es responsiva, con un diseño limpio y moderno, e incluye secciones sobre mí, mis proyectos, habilidades y contacto.</p>                 
                     </div>
-
                     <div class="project-item">
-                        <h3>Proyecto 3</h3>
-                        <p>Descripción </p>
+                        <h3>Logica digital / VHDL</h3>
+                        <p>Desarrollo de circuitos lógicos utilizando el lenguaje VHDL para la implementación de sistemas digitales.</p>
                     </div>
                 </div>
             </article>
