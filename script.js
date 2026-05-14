@@ -56,16 +56,33 @@ document.addEventListener("DOMContentLoaded", function() {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            const asunto = document.getElementById('asunto').value;
-            const mensaje = document.getElementById('mensaje').value;
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const asunto = document.getElementById('asunto').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
             
+            // Validación
+            let errorMessage = '';
+            if (!nombre) errorMessage = 'El nombre es obligatorio.';
+            else if (!email) errorMessage = 'El correo electrónico es obligatorio.';
+            else if (!asunto) errorMessage = 'El asunto es obligatorio.';
+            else if (!mensaje) errorMessage = 'El mensaje es obligatorio.';
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errorMessage = 'El formato del correo electrónico no es válido.';
+            
+            if (errorMessage) {
+                contactMessage.textContent = errorMessage;
+                contactMessage.classList.remove('success');
+                contactMessage.classList.add('error');
+                return;
+            }
+            
+            // Si pasa validación
             const body = `Nombre: ${nombre}%0AEmail: ${email}%0A%0A${mensaje}`;
             const mailtoLink = `mailto:kevinjasiel1@hotmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(body)}`;
             
             contactMessage.textContent = 'Abriendo cliente de correo...';
-            contactMessage.classList.remove('success');
+            contactMessage.classList.remove('error');
+            contactMessage.classList.add('success');
             
             // Abrir cliente de correo
             window.location.href = mailtoLink;
