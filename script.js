@@ -54,8 +54,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            contactMessage.textContent = 'Enviando mensaje...';
-            // Let the form submit normally
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const body = `Nombre: ${nombre}%0AEmail: ${email}%0A%0A${mensaje}`;
+            const mailtoLink = `mailto:kevinjasiel1@hotmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(body)}`;
+            
+            contactMessage.textContent = 'Abriendo cliente de correo...';
+            contactMessage.classList.remove('success');
+            
+            // Abrir cliente de correo
+            window.location.href = mailtoLink;
+            
+            // Mostrar mensaje de éxito después de un breve delay
+            setTimeout(() => {
+                contactMessage.textContent = 'Cliente de correo abierto exitosamente';
+                contactMessage.classList.add('success');
+            }, 1000);
         });
     }
 

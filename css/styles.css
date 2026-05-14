@@ -594,6 +594,22 @@ button[type="submit"]:active, input[type="submit"]:active {
     font-size: 0.95rem;
 }
 
+.form-message.success {
+    color: #28a745; /* Verde para éxito */
+    animation: fadeInSuccess 0.5s ease-in-out;
+}
+
+@keyframes fadeInSuccess {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (min-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr 1.2fr;
