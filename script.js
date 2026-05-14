@@ -26,6 +26,29 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('primary-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            const expanded = navMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', expanded);
+            menuToggle.textContent = expanded ? '✕' : '☰';
+            menuToggle.title = expanded ? 'Cerrar menú' : 'Abrir menú';
+        });
+
+        document.querySelectorAll('#primary-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.textContent = '☰';
+                    menuToggle.title = 'Abrir menú';
+                }
+            });
+        });
+    }
+
     const contactForm = document.getElementById('contact-form');
     const contactMessage = document.querySelector('.form-message');
 
