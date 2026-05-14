@@ -491,6 +491,16 @@ body.dark-mode footer {
     animation: glow 3s ease-in-out infinite;
 }
 
+.project-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    object-fit: cover;
+}
+
 .profile-img:hover {
     transform: scale(1.08);
     box-shadow: 0 0 60px var(--color-shadow-glow);
